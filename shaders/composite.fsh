@@ -1,12 +1,9 @@
 #version 330 compatibility
 
-#define fogToggle
-#define fogStrenth 0.993 // [0.95 0.96 0.97 0.98 0.99 0.992 0.993 0.994 0.995 0.996 0.997 0.998 0.999 0.9999 0.99999]
-#define fogSkyOverlap
+#include "settings.glsl"
 
 uniform sampler2D colortex0;
 uniform sampler2D depthtex0;
-uniform sampler2D depthtex1;
 uniform vec3 skyColor;
 uniform float fogEnd;
 uniform float fogStart;
@@ -22,10 +19,7 @@ void main() {
     vec4 outputColor = texture(colortex0, texcoord);
 
     #ifdef fogToggle
-        float depth1 = texture(depthtex1, texcoord).r;
-        float depth0 = texture(depthtex0, texcoord).r;
-
-        float depth = (depth1 > 0.999999971) ? depth0 : depth1;
+        float depth = texture(depthtex0, texcoord).r;
 
         #ifndef fogSkyOverlap
             if (depth < 1.0) {

@@ -1,11 +1,9 @@
 #version 330 compatibility
 
-#include "shadow_strength.glsl"
-#define oldFoliageGreen
-#define foliageGreenAmount 1.6 // [1.0 1.1 1.2 1.3 1.4 1.5 1.6 1.7 1.8 1.9 2.0]
-
 uniform sampler2D lightmap;
 uniform sampler2D gtexture;
+
+#include "settings.glsl"
 
 uniform float alphaTestRef = 0.1;
 
@@ -23,13 +21,12 @@ void main() {
 	#ifdef oldFoliageGreen 
 		bool tinted = foliage.r == foliage.g && foliage.r == foliage.b;
 		if (!tinted) {
-			foliage.g *= foliageGreenAmount;
-		}	
+            foliage.r += 0.0921;
+            foliage.g += 0.4412;
+            foliage.g *= foliageGreenAmount;
+		}
 	#endif
+    
+#include "light.glsl"
 
-	color = texture(gtexture, texcoord) * foliage;
-	color *= pow(texture(lightmap, lmcoord), vec4(shadowStrength));
-	if (color.a < alphaTestRef) {
-		discard;
-	}
 }

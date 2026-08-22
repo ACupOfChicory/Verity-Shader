@@ -7,10 +7,19 @@ option.vignette = Vignette
 option.fogToggle = Fog
 option.fogStrenth = Fog Strength
 option.oldFoliageGreen = Old Vibrant Green Foliage
-option.foliageGreenAmount = Foliage Green Strength
+option.foliageGreenAmount = Acid grass
+option.foliageGreenAmount.comment = if set to anything higher than 1.3, will make grass acid colour, will work only with Old Vibrant Green Foliage set to true
 option.noWaterTransparency = No Water Transparency
 option.waterBlueness = Water Blueness
 option.fogSkyOverlap = Fog Sky Overlap
 option.starBrightness = Star Brightness
 option.sunMoonBrightness = Sun and Moon Brightness
-option.shadowStrength = Shadow Strength
+profile.original = §aWonderful
+profile.cinematic = §bHorrorful
+option.grayscaleLight = Grayscale Lighting
+
+
+#Credit to Capt Tatsu for button code
+option.ABOUT=VerityShader1.0 
+option.ABOUT.comment=by Acupofchicory modrinth.com/user/acupofchicory
+value.ABOUT.0=by Acupofchicory
