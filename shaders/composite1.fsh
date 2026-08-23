@@ -45,7 +45,7 @@ void main() {
         float dist = distance(shifted, vec2(0.0, 0.0));
         float vignetteFactor = smoothstep(0.2, 0.9, dist) * vignetteAmount;
 
-        outputColor = outputColor - vignetteFactor;
+        outputColor.rgb = outputColor.rgb - vignetteFactor;
     #endif
 
     #ifdef noiseToggle 
