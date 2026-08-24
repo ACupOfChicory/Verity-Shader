@@ -10,7 +10,7 @@
     lightGRAY.r = scalarF;
     lightGRAY.g = scalarF;
     lightGRAY.b = scalarF;
-    color *= pow(lightGRAY, vec4(4));
+    color.rgb *= pow(lightGRAY.rgb, vec3(4));
     if (color.a < alphaTestRef) {
         discard;
     }
@@ -18,7 +18,7 @@
 //when gray scale light is OFF
 #ifndef grayscaleLight
     color = texture(gtexture, texcoord) * foliage;
-        color *= pow(texture(lightmap, lmcoord), vec4(2.2));
+        color.rgb *= pow(texture(lightmap, lmcoord).rgb, vec3(4));
         if (color.a < alphaTestRef) {
           discard;
         }
