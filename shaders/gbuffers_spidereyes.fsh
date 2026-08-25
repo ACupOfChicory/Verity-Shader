@@ -1,5 +1,7 @@
 #version 330 compatibility
 
+#include "settings.glsl"
+
 uniform sampler2D gtexture;
 
 uniform float alphaTestRef = 0.1;
@@ -16,3 +18,5 @@ void main() {
 		discard;
 	}
 }
+
+

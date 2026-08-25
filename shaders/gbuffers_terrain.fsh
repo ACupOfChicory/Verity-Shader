@@ -1,11 +1,11 @@
 #version 330 compatibility
 
+#include "settings.glsl"
+
 uniform sampler2D lightmap;
 uniform sampler2D gtexture;
 
-#include "settings.glsl"
-
-uniform float alphaTestRef = 0.1;
+// settings
 
 in vec2 lmcoord;
 in vec2 texcoord;
@@ -13,6 +13,9 @@ in vec4 glcolor;
 
 /* RENDERTARGETS: 0 */
 layout(location = 0) out vec4 color;
+
+//light function
+#include "light.glsl"
 
 void main() {
 
@@ -26,7 +29,8 @@ void main() {
             foliage.g *= foliageGreenAmount;
 		}
 	#endif
-    
-#include "light.glsl"
+    color = texture(gtexture, texcoord) * foliage;
+    lightFunction(lightmap, lmcoord);
+
 
 }

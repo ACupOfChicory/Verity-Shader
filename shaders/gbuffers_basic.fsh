@@ -1,5 +1,7 @@
 #version 330 compatibility
 
+#include "settings.glsl"
+
 uniform sampler2D lightmap;
 
 uniform float alphaTestRef = 0.1;

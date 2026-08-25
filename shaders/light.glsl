@@ -1,26 +1,25 @@
 
-//when gray scale light is ON
+// light making function
+uniform float alphaTestRef = 0.1;
+
+vec4 lightFunction(sampler2D lightmap, vec2 lmcoord){
+    
 #ifdef grayscaleLight
-    color = texture(gtexture, texcoord) * foliage;
+    //when gray scale light is ON
     vec4 lightGRAY = texture(lightmap, lmcoord);
-    float scalar1 = lightGRAY.r * 0.299;
-    float scalar2 = lightGRAY.g * 0.587;
-    float scalar3 = lightGRAY.b * 0.114;
-    float scalarF = scalar1 + scalar2 + scalar3;
-    lightGRAY.r = scalarF;
-    lightGRAY.g = scalarF;
-    lightGRAY.b = scalarF;
+    float scalarF = lightGRAY.r * 0.299 + lightGRAY.g * 0.587 + lightGRAY.b * 0.114;
+    lightGRAY.rgb = vec3(scalarF);
     color.rgb *= pow(lightGRAY.rgb, vec3(4));
+#endif
+    //when gray scale light is OFF
+#ifndef grayscaleLight
+    color.rgb *= pow(texture(lightmap, lmcoord).rgb, vec3(4));
+#endif
+    // if we wont check this it will make things not transparent
     if (color.a < alphaTestRef) {
         discard;
     }
-#endif
-//when gray scale light is OFF
-#ifndef grayscaleLight
-    color = texture(gtexture, texcoord) * foliage;
-        color.rgb *= pow(texture(lightmap, lmcoord).rgb, vec3(4));
-        if (color.a < alphaTestRef) {
-          discard;
-        }
-#endif
+    // return refined color
+    return color;
+}
 
