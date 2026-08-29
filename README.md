@@ -41,11 +41,3 @@ Most effects can be toggled and customized in the settings menu for the shader i
 The shader also accentuates shadows similarly to old versions, adds dynamic fog which darkens with depth, and removes transparency from the top water layers so you can't see what's below.
 
 ![Forest with Heavy Fog](shot3.png)
-
-## License
-
-This project is a fork of [Somber](https://github.com/Snorfield/Somber) (originally created by Snorfield). 
-
-Because this fork (in furute) integrates core rendering and atmospheric elements from [Noble Shaders](https://github.com/BelmuTM/Noble) (Copyright (C) 2026 Belmu), which is licensed under the GNU GPL v3.0, **the entire combined project is now licensed under the GNU General Public License v3.0 (GPLv3)**.
-
-You can read the full terms in the [LICENSE](./LICENSE) file.
