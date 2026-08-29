@@ -25,10 +25,3 @@ void main() {
     float fogAmount = FoggyFog(gl_FragCoord.xy / vec2(viewWidth, viewHeight), gl_FragCoord.z, fogTint);
     color.rgb = mix(color.rgb, fogTint, fogAmount);
 }
-
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> temp-fix
