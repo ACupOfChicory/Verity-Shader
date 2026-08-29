@@ -26,6 +26,9 @@ void main() {
     color.rgb = mix(color.rgb, fogTint, fogAmount);
 }
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> temp-fix
