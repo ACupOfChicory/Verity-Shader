@@ -20,3 +20,10 @@ void main() {
 	color = texture(gtexture, texcoord) * glcolor;
     lightFunction(lightmap, lmcoord);
 }
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 298034d (uhh i forgor. fih :falled_rose_emoji:)
