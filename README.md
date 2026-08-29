@@ -2,11 +2,11 @@
 
 <br>
 
-<div align="center">
+<!-- <div align="center">
   <img src="https://img.shields.io/modrinth/dt/somber?style=flat-square&logo=modrinth&logoColor=00AF5C" alt="Modrinth Downloads">
   <img src="https://img.shields.io/modrinth/game-versions/somber?style=flat-square&logo=modrinth&logoColor=00AF5C" alt="Modrinth Game Versions">
   <img alt="Modrinth Followers" src="https://img.shields.io/modrinth/followers/somber?style=flat-square&logo=modrinth&logoColor=00AF5C">
-</div>
+</div> -->
 
 
 # Somber
