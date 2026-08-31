@@ -24,9 +24,10 @@ void main() {
 	#ifdef oldFoliageGreen 
 		bool tinted = foliage.r == foliage.g && foliage.r == foliage.b;
 		if (!tinted) {
-        #ifdef verityGrass
+    
             foliage.r += 0.0921;
             foliage.g += 0.4412;
+#ifdef verityGrass
             foliage.b += 0.07;
         #endif
             foliage.g *= foliageGreenAmount;
