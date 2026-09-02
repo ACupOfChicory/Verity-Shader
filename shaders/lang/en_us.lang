@@ -14,10 +14,19 @@ option.waterBlueness = Water Blueness
 option.fogSkyOverlap = Fog Sky Overlap
 option.starBrightness = Star Brightness
 option.sunMoonBrightness = Sun and Moon Brightness
-profile.original = §aWonderful
-profile.cinematic = §bHorrorful
+profile.original = §aVerity
+profile.cinematic = §bWIP
 option.grayscaleLight = Grayscale Lighting
-
+option.caveFogLow = Cave fog low point
+option.caveFogLow.comment = Where fog becomes black, set to -20b from Y cave start
+option.caveFogHigh = Cave fog high point
+option.caveFogHigh.comment = Where fog starts to become black, set to -10b from Y cave start
+option.fogStart = Fog start distance
+option.fogStart.comment = Where fog starts to form
+option.fogEnd = Fog end distance
+option.fogEnd.comment = Where fog becomes full
+screen.suboptions = §eDetails
+screen.fog = §bFog settings
 
 #Credit to Capt Tatsu for button code
 option.ABOUT=VerityShader1.0 
