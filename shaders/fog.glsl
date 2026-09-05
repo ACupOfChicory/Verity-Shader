@@ -32,16 +32,17 @@ float FoggyFog(vec2 texcoord, float depth, out vec3 fogColorOut){
         
     }
     if(isEyeInWater == 2){
-        PhileasFogg = smoothstep(4.0, 10.0, realdistance);
+        PhileasFogg = smoothstep(0.0, 3.0, realdistance);
         fogColorOut = vec3(0.6, 0.1, 0.0);
         
     }
     if(isEyeInWater == 3){
-        PhileasFogg = smoothstep(2.0, 5.0, realdistance);
+        PhileasFogg = smoothstep(0.0, 2.0, realdistance);
         fogColorOut = vec3(0.710, 0.918, 0.918);
         
         
     }
+
     PhileasFogg = mix(PhileasFogg, 1.0, blindness);
     return PhileasFogg;
     

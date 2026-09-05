@@ -27,7 +27,7 @@ void main() {
     
             foliage.r += 0.0921;
             foliage.g += 0.4412;
-#ifdef verityGrass
+        #ifdef verityGrass
             foliage.b += 0.07;
         #endif
             foliage.g *= foliageGreenAmount;
